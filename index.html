@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Rooms</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="channels container">
+        <h1>ChatRoom</h1>
+        <h2>Channels</h2>
+        <div class="buttons">
+            <button class="btn active" id="general">#general</button>
+            <button class="btn" id="gaming">#gaming</button>
+            <button class="btn" id="programming">#programming</button>
+            <button class="btn" id="jobs">#jobs</button>
+        </div>
+    </div>
+    <div class="chats-container container">
+        <div class="form">
+            <form class="new-chat-form">
+                <textarea name="msg" id="msg" cols="30" rows="2"></textarea>
+                <!-- <input type="text" id="msg" autofocus required placeholder="Type a messege"> -->
+                <input type="submit" id="submit" value="Send">
+            </form>
+        </div>
+
+        <div class="chats">
+            <!-- <div class="chat">
+                <div class="user-dets">
+                    <img src="https://img.icons8.com/cotton/64/000000/user-male--v4.png"/>
+                    <p>Rahul T</p>
+                    
+                </div>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, rem? Temporibus sint veritatis, fuga repudiandae, nesciunt, in minus quo nemo earum laudantium maiores voluptatum facilis ex magni sit natus consequuntur!</p>
+                <p class="time">5:30</p>
+            </div> -->
+        </div>
+    </div>
+    <div class="users container">
+        <div class="update-msg"></div>
+        <form class="update-username">
+            <input type="text" id="name" required placeholder="name">
+            <input type="submit" id="submit" value="Update">
+        </form>
+
+    </div>
+
+
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-firestore.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyC2vjgH5h6hXeKsxIYh5oOjhf8ifuPGMcI",
+        authDomain: "chatroom-92abb.firebaseapp.com",
+        projectId: "chatroom-92abb",
+        storageBucket: "chatroom-92abb.appspot.com",
+        messagingSenderId: "216747028120",
+        appId: "1:216747028120:web:4dc77ee1fcdbbeb6286aed",
+        measurementId: "G-49EF1PPQ2Q"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
+    </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -26,7 +26,7 @@ newNameForm.addEventListener('submit', e => {
 
     // show then hide the update msg 
     updateMsg.innerHTML = `
-    <p> Yout name was updated to ${newName} </p>
+    <p> Your name was updated to ${newName} </p>
     `
     setTimeout(() => {
         updateMsg.innerHTML = ``
